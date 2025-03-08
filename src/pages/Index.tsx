@@ -112,7 +112,6 @@ const Index = () => {
     <>
       <HeaderNav />
 
-<<<<<<< HEAD
 
       <div className="bg-[#000000]  px-4 py-6 font-sans">
 
@@ -134,59 +133,6 @@ const Index = () => {
                     height={15} />
                   <p className="text-white text-sm sm:text-base">15,854,676.21</p>
                 </div>
-=======
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-8">
-              <a href="/" className="text-white hover:text-secondary-foreground transition-colors">Home</a>
-              <a href="#marketplace" className="text-white hover:text-secondary-foreground transition-colors">Marketplace</a>
-              <a href="#airdrop" className="text-white hover:text-secondary-foreground transition-colors">Airdrop</a>
-              <a href="#governance" className="text-white hover:text-secondary-foreground transition-colors">Governance</a>
-              <a href="/trade" className="text-white hover:text-secondary-foreground transition-colors">Trade</a>
-            </div>
-
-            {/* Connect Wallet Button - Desktop */}
-            <div className="hidden md:block">
-              <Button variant="secondary" className="font-semibold">
-                Connect Wallet
-              </Button>
-            </div>
-          </div>
-
-          {/* Mobile Navigation */}
-          <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} pb-4`}>
-            <div className="flex flex-col space-y-4">
-              <a href="/" className="text-white hover:text-secondary-foreground transition-colors">Home</a>
-              <a href="#marketplace" className="text-white hover:text-secondary-foreground transition-colors">Marketplace</a>
-              <a href="#airdrop" className="text-white hover:text-secondary-foreground transition-colors">Airdrop</a>
-              <a href="#governance" className="text-white hover:text-secondary-foreground transition-colors">Governance</a>
-              <a href="/trade" className="text-white hover:text-secondary-foreground transition-colors">Trade</a>
-              <Button variant="secondary" className="font-semibold w-full">
-                Connect Wallet
-              </Button>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      {/* Hero Section */}
-      <section className="pt-24 pb-20 bg-gradient-to-br from-primary/5 via-primary/10 to-primary/5">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-            <div className="flex-1 text-center md:text-left">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-primary-foreground bg-clip-text text-transparent">
-                Trade Real Estate in the Digital World
-              </h1>
-              <p className="text-xl mb-8 text-muted-foreground max-w-2xl">
-                Experience the future of property investment with Parcl. Buy, sell, and trade real estate assets in a seamless digital marketplace.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <Button size="lg" className="font-semibold">
-                  Start Trading
-                </Button>
-                <Button size="lg" variant="outline" className="font-semibold">
-                  Learn More
-                </Button>
->>>>>>> 9c6d5adfdd776c350d49426f2888270609f49e10
               </div>
               <div className="hidden sm:block w-px h-12 bg-gray-700"></div>
               <div>
