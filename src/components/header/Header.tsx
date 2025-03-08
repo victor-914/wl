@@ -5,8 +5,12 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useState } from "react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+import { useIsMobile } from "@/hooks/use-mobile";
 function HeaderNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isMobile = useIsMobile();
+  // console.log("🚀 ~ HeaderNav ~ isMobile:", isMobile)
+  // console.log("🚀 ~ HeaderNav ~ isMenuOpen:", isMenuOpen)
   return (
     <nav className="bg-black
     fixed w-full z-50">
@@ -23,16 +27,18 @@ function HeaderNav() {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="flex md:flex items-center space-x-8">
+        {
+          !isMobile &&   <div className="flex md:flex items-center space-x-8">
 
-            <a href="/" className="text-white hover:text-[#22C55E;]  font-bold transition-colors">Home</a>
-            <a target="_blank" href="/stake" className="text-white hover:text-[#22C55E;]  font-bold transition-colors" >Stake</a>
-            <a target="_blank" href="/airdrop" className="text-white hover:text-[#22C55E;]  font-bold transition-colors">Airdrop</a>
-            <WalletMultiButton />
+          <a href="/" className="text-white hover:text-[#22C55E;]  font-bold transition-colors">Home</a>
+          <a target="_blank" href="/stake" className="text-white hover:text-[#22C55E;]  font-bold transition-colors" >Stake</a>
+          <a target="_blank" href="/airdrop" className="text-white hover:text-[#22C55E;]  font-bold transition-colors">Airdrop</a>
+          <WalletMultiButton />
 
-            {/* <a href="/gov" className="text-white hover:text-secondary-foreground   font-bold transition-colors">Governance</a> */}
-            {/* <a href="/trade" className="text-white hover:text-secondary-foreground  font-bold  transition-colors">Trade</a> */}
-          </div>
+          {/* <a href="/gov" className="text-white hover:text-secondary-foreground   font-bold transition-colors">Governance</a> */}
+          {/* <a href="/trade" className="text-white hover:text-secondary-foreground  font-bold  transition-colors">Trade</a> */}
+        </div>
+        }
 
           {/* Connect Wallet Button - Desktop */}
           {/* <div className="hidden md:block"> font-semibold font-bold 
